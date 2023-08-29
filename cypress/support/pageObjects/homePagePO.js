@@ -1,3 +1,5 @@
+/// <reference types="cypress" />
+
 class HomePage {
   navigate(homePageUrl) {
     cy.visit(homePageUrl);
@@ -7,8 +9,8 @@ class HomePage {
     cy.get(buttonAccess).click();
   }
 
-  verificationPageAccess(accessPageUrl) {
-    cy.url(accessPageUrl).should("eq", accessPageUrl);
+  verificationAccessPage(accessPageUrl) {
+    cy.url().should("eq", accessPageUrl);
   }
 }
 

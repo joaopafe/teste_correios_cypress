@@ -1,3 +1,5 @@
+/// <reference types="cypress" />
+
 import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
 import HomePage from "../pageObjects/homePagePO";
 import { homePageConfig } from "../../config/homePageConfig";
@@ -13,5 +15,5 @@ When("clico no botao de acesso", () => {
 });
 
 Then("sou direcionado à página de acesso dos correios", () => {
-  homePage.verificationPageAccess(homePageConfig.urlAccess);
+  homePage.verificationAccessPage(homePageConfig.urlAccess);
 });
